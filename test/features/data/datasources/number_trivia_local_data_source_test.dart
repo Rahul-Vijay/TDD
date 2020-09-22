@@ -31,7 +31,7 @@ void main(){
       // act
       final result = await dataSource.getLastNumberTrivia();
       // assert
-      verify(mockSharedPreferences.getString('CACHED_NUMBER_TRIVIA'));
+      verify(mockSharedPreferences.getString(CACHED_NUMBER_TRIVIA));
       expect(result, equals(tNumberTriviaModel));
     });
   });
