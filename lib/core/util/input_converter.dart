@@ -3,7 +3,7 @@ import 'package:dartz/dartz.dart';
 
 class InputConverter {
   Either<Failure, int> stringToUnsignedInteger(String str){
-    // TODO: Implement 
+    return Right(int.parse(str));
   }
 }
 
