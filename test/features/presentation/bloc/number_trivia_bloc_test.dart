@@ -28,4 +28,9 @@ void main() {
         concrete: mockGetConcreteNumberTrivia,
         inputConverter: mockInputConverter);
   });
+
+  test("intiaState should be Empty", () {
+    // assert
+    expect(bloc.initialState, equals(Empty()));
+  });
 }
