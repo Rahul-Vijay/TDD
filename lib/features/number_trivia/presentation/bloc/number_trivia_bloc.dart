@@ -13,19 +13,20 @@ class NumberTriviaBloc extends Bloc<NumberTriviaEvent, NumberTriviaState> {
   final GetConcreteNumberTrivia getConcreteNumberTrivia;
   final GetRandomNumberTrivia getRandomNumberTrivia;
   final InputConverter inputConverter;
-  
-  NumberTriviaBloc({
-    @required GetConcreteNumberTrivia concrete,
-    @required GetRandomNumberTrivia random,
-    @required this.inputConverter
-  }) : assert(concrete != null),
+
+  NumberTriviaBloc(
+      {@required GetConcreteNumberTrivia concrete,
+      @required GetRandomNumberTrivia random,
+      @required this.inputConverter})
+      : assert(concrete != null),
         assert(random != null),
         getConcreteNumberTrivia = concrete,
-        getRandomNumberTrivia = random, super(null);
-  
+        getRandomNumberTrivia = random,
+        super(null);
+
   @override
   NumberTriviaState get initialState => Empty();
-  
+
   @override
   Stream<NumberTriviaState> mapEventToState(
     NumberTriviaEvent event,
