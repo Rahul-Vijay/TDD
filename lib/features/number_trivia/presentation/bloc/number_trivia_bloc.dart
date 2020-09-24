@@ -24,13 +24,14 @@ class NumberTriviaBloc extends Bloc<NumberTriviaEvent, NumberTriviaState> {
         getRandomNumberTrivia = random,
         super(null);
 
-  @override
   NumberTriviaState get initialState => Empty();
 
   @override
   Stream<NumberTriviaState> mapEventToState(
     NumberTriviaEvent event,
   ) async* {
-    // TODO: implement mapEventToState
+    if (event is GetTriviaForConcreteNumber) {
+      inputConverter.stringToUnsignedInteger(event.numberString);
+    }
   }
 }
